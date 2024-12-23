@@ -22,6 +22,7 @@ Future<void> main(List<String> arguments) async {
         .split('\n')
         .where((branch) => branch.isNotEmpty)
         .map((branch) => branch.trim().replaceAll('* ', ''))
+        .map((branch) => branch.trim().replaceAll('+ ', ''))  // worktree branches
         .where((branch) => branch.isNotEmpty)
         .toList();
 
