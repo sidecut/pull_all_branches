@@ -32,7 +32,7 @@ Future<void> main(List<String> arguments) async {
           'git', ['rev-list', '--left-right', '--count', '$branch...origin/$branch']);
       
       if (statusResult.exitCode != 0) {
-        print('Warning: Could not check status for branch $branch');
+        // print('Warning: Could not check status for branch $branch');
         continue;
       }
 
